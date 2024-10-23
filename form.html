@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Matheus Pregnolato| Product review form">
+    <meta name="author" content="Matheus Pregnolato">
+    <link rel="stylesheet" href="./styles/form.css">
+    <script src="./scripts/form.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form method="get" action="review.html" id="reviewForm">
+            <label for="productName">Product Name:</label>
+            <select id="productName" name="productName" required>
+                <option value="" disabled selected>Select a Product ...</option>
+                <!-- Options will be populated by JavaScript -->
+            </select>
+
+            <fieldset>
+                <legend>Overall Rating:</legend>
+                <label><input type="radio" name="rating" id="rating1" value="1" required>&starf;</label>
+                <label><input type="radio" name="rating" id="rating2" value="2" required>&starf;&starf;</label>
+                <label><input type="radio" name="rating" id="rating3" value="3" required>&starf;&starf;&starf;</label>
+                <label><input type="radio" name="rating" id="rating4" value="4" required>&starf;&starf;&starf;&starf;</label>
+                <label><input type="radio" name="rating" id="rating5" value="5" required>&starf;&starf;&starf;&starf;&starf;</label>
+            </fieldset>
+
+            <label for="installationDate">Date of Installation:</label>
+            <input type="date" id="installationDate" name="installationDate" required>
+
+            <fieldset>
+                <legend>Useful Features:</legend>
+                <label><input type="checkbox" id="feature1" name="features" value="Feature 1"> Feature 1</label>
+                <label><input type="checkbox" id="feature2" name="features" value="Feature 2"> Feature 2</label>
+                <label><input type="checkbox" id="feature3" name="features" value="Feature 3"> Feature 3</label>
+            </fieldset>
+
+            <label for="writtenReview">Written Review:</label>
+            <textarea id="writtenReview" name="writtenReview"></textarea>
+
+            <label for="userName">User Name:</label>
+            <input type="text" id="userName" name="userName">
+
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+
+    <footer>
+        <p>©<span id="currentyear"></span>Matheus Pregnolato | Brazil</p>
+        <p id="lastModified"></p>
+    </footer>
+    </footer>
+</body>
+</html>
